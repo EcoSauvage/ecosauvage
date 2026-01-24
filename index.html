@@ -7,94 +7,112 @@
 <style>
     body {
         font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
-        margin: 40px;
-        line-height: 1.45;
+        margin: 0;
+        padding: 0;
         color: #111;
+        line-height: 1.45;
+    }
+    .wrapper {
+        max-width: 780px;
+        margin: 40px auto 80px auto;
+        padding: 0 22px;
+        text-align: center;
     }
     h1 {
         font-weight: 600;
-        font-size: 32px;
-        margin-bottom: 8px;
+        font-size: 36px;
+        margin-bottom: 4px;
     }
     h2 {
         font-weight: 600;
-        font-size: 22px;
-        margin-top: 28px;
-        margin-bottom: 6px;
+        font-size: 24px;
+        margin-top: 32px;
+        margin-bottom: 10px;
     }
     p {
-        margin: 8px 0 12px 0;
-        font-size: 18px;
+        font-size: 19px;
+        margin: 10px 0 18px 0;
+        text-align: justify;
     }
     .small {
-        font-size: 16px;
+        font-size: 17px;
         opacity: 0.85;
-    }
-    .center {
-        text-align: center;
+        text-align: justify;
     }
     hr {
-        margin: 28px 0;
+        margin: 40px auto;
         opacity: 0.4;
+        width: 50%;
+    }
+
+    /* Responsive léger */
+    @media (max-width: 600px) {
+        .wrapper { padding: 0 16px; }
+        h1 { font-size: 30px; }
+        h2 { font-size: 22px; }
+        p, .small { font-size: 18px; }
+        hr { width: 70%; }
     }
 </style>
 </head>
 
 <body>
 
-<div class="center">
+<div class="wrapper">
+
     <h1>ÉcoSauvage</h1>
-    <p style="font-style: italic; font-size:20px; margin-top:0;">Ensemble autonome</p>
+    <p style="font-style: italic; text-align:center; font-size:21px; margin-top:0;">
+        Ensemble autonome
+    </p>
+
+    <h2>Orientation</h2>
+    <p>
+        ÉcoSauvage est un lieu autonome. Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
+        Le lieu avance par cohérence, contributions et excédents. Lecture avant contact recommandée.
+    </p>
+
+    <h2>Gradients d'entrée</h2>
+    <p>
+        Progression volontaire : <strong>curieux compatibles → soutiens → actifs → collaborateurs → membres</strong>.
+        Ni ouvert à tous, ni fermé ; question de pertinence, utilité, autonomie.
+    </p>
+
+    <h2>Contributions</h2>
+    <p>
+        Possibles à distance (matériel, financier, compétences) ou sur place (selon besoins).
+        Objectif : autonomie + excédents.
+    </p>
+
+    <h2>Cadre opérationnel</h2>
+    <p>
+        Arbitrages techniques : <strong>eau → énergie → serre → poules → bois → déchets → safran → excédents</strong>.
+        Safran interne. Excédents pour soutenir l’ensemble.
+    </p>
+
+    <h2>Première prise de contact</h2>
+    <p>
+        Pour un premier message : se situer, indiquer ce qui est proposé (matériel, financier, compétences, disponibilité)
+        et l’horizon possible. Le lieu répond lorsqu’il y a alignement.
+    </p>
+
+    <p class="small">
+        Contact initial : <strong>contact@ecosauvage.fr</strong>
+    </p>
+
+    <hr>
+
+    <p class="small">
+        <strong>EN (balanced & minimal)</strong><br><br>
+        Autonomous site. No visits, no tourism, no events, no business.<br>
+        Entry via relevance: interested → support → active → collaboration → membership.<br>
+        Remote contributions allowed (material, financial, skills); on-site depends on needs.<br>
+        Technical priorities: water → energy → greenhouse → poultry → wood → waste → saffron → surplus.<br>
+        Saffron internal. Surplus supports the whole.<br>
+        First contact: position + contribution + horizon.<br>
+        Initial email: contact@ecosauvage.fr
+    </p>
+
 </div>
-
-<h2>Orientation</h2>
-<p>
-ÉcoSauvage est un lieu autonome. 
-Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
-Le lieu avance par cohérence, contributions et excédents. 
-Lecture avant contact recommandée.
-</p>
-
-<h2>Entrée & gradients</h2>
-<p>
-L’accès passe par une progression volontaire : 
-<strong>curieux compatibles → soutiens → actifs → collaborateurs → membres</strong>.
-Ce n’est ni ouvert à tous, ni fermé ; c’est une question de pertinence et d’utilité.
-</p>
-
-<h2>Contributions possibles</h2>
-<p>
-<strong>À distance</strong> (matériel, financier, compétences), 
-ou <strong>sur place</strong> (selon pertinence et besoins du moment).
-La forme varie, l’objectif reste l’autonomie et les excédents.
-</p>
-
-<h2>Cadre opérationnel</h2>
-<p>
-Arbitrages techniques dans un ordre clair : 
-<strong>eau → énergie → serre → poules → bois → déchets → safran → excédents</strong>.
-Le safran reste interne. Les excédents soutiennent l’ensemble.
-</p>
-
-<h2>Première prise de contact</h2>
-<p>
-Pour un premier message : se situer, préciser ce qui est proposé 
-(matériel, financier, compétences, disponibilité) 
-et l’horizon possible. 
-Le lieu répond lorsque l’alignement est réel.
-</p>
-
-<p class="small"><strong>Contact initial :</strong> contact@ecosauvage.fr</p>
-
-<hr>
-
-<p class="small">
-<strong>EN (minimal)</strong><br>
-Autonomous site. No visits, no tourism, no business.<br>
-Entry via relevance: interested → support → active → collaboration → membership.<br>
-Remote support acceptable (material, financial, skills).<br>
-Initial contact: contact@ecosauvage.fr
-</p>
 
 </body>
 </html>

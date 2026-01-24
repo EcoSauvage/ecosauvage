@@ -9,10 +9,10 @@
         font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
         margin: 0;
         padding: 0;
-        color: #111;
+        color: #131313;
         line-height: 1.45;
     }
-    .wrapper {
+    .wrap {
         max-width: 780px;
         margin: 40px auto 80px auto;
         padding: 0 22px;
@@ -21,98 +21,110 @@
     h1 {
         font-weight: 600;
         font-size: 36px;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
+        letter-spacing: 0.5px;
     }
-    h2 {
-        font-weight: 600;
-        font-size: 24px;
-        margin-top: 32px;
-        margin-bottom: 10px;
+    .sub {
+        font-style: italic;
+        font-size: 21px;
+        margin-top: 0px;
+        opacity: 0.9;
     }
-    p {
-        font-size: 19px;
-        margin: 10px 0 18px 0;
+    .block {
+        margin-top: 36px;
         text-align: justify;
+        font-size: 19px;
+    }
+    .title {
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-align: center;
     }
     .small {
         font-size: 17px;
         opacity: 0.85;
         text-align: justify;
+        margin-top: 16px;
+    }
+    .contact {
+        font-size: 19px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: 600;
     }
     hr {
         margin: 40px auto;
         opacity: 0.4;
         width: 50%;
     }
-
-    /* Responsive léger */
-    @media (max-width: 600px) {
-        .wrapper { padding: 0 16px; }
-        h1 { font-size: 30px; }
-        h2 { font-size: 22px; }
-        p, .small { font-size: 18px; }
-        hr { width: 70%; }
+    .imgs {
+        margin-top: 32px;
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .imgs img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    @media (max-width: 700px) {
+        .imgs {
+            grid-template-columns: 1fr;
+        }
+        .imgs img {
+            height: 200px;
+        }
     }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="wrap">
 
     <h1>ÉcoSauvage</h1>
-    <p style="font-style: italic; text-align:center; font-size:21px; margin-top:0;">
-        Ensemble autonome
-    </p>
+    <div class="sub">Ensemble autonome</div>
 
-    <h2>Orientation</h2>
-    <p>
-        ÉcoSauvage est un lieu autonome. Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
-        Le lieu avance par cohérence, contributions et excédents. Lecture avant contact recommandée.
-    </p>
+    <div class="imgs">
+        <img src="assets/img1.jpg" alt="">
+        <img src="assets/img2.jpg" alt="">
+        <img src="assets/img3.jpg" alt="">
+    </div>
 
-    <h2>Gradients d'entrée</h2>
-    <p>
-        Progression volontaire : <strong>curieux compatibles → soutiens → actifs → collaborateurs → membres</strong>.
-        Ni ouvert à tous, ni fermé ; question de pertinence, utilité, autonomie.
-    </p>
+    <div class="block">
+        <div class="title">STATUT DU LIEU</div>
+        Lieu autonome. Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
+        Phase actuelle : densification + excédents. Safran réservé interne.
+        Orientation : autonomie + rendement + pertinence relationnelle.
+    </div>
 
-    <h2>Contributions</h2>
-    <p>
-        Possibles à distance (matériel, financier, compétences) ou sur place (selon besoins).
-        Objectif : autonomie + excédents.
-    </p>
-
-    <h2>Cadre opérationnel</h2>
-    <p>
-        Arbitrages techniques : <strong>eau → énergie → serre → poules → bois → déchets → safran → excédents</strong>.
-        Safran interne. Excédents pour soutenir l’ensemble.
-    </p>
-
-    <h2>Première prise de contact</h2>
-    <p>
-        Pour un premier message : se situer, indiquer ce qui est proposé (matériel, financier, compétences, disponibilité)
-        et l’horizon possible. Le lieu répond lorsqu’il y a alignement.
-    </p>
-
-    <p class="small">
-        Contact initial : <strong>contact@ecosauvage.fr</strong>
-    </p>
+    <div class="block">
+        <div class="title">ENTRÉE & CONTRIBUTIONS</div>
+        Gradients d’entrée : curieux compatibles → soutiens → actifs → collaborateurs → membres.
+        Contributions possibles à distance (matériel, financier, compétences) ou sur place selon besoins.
+        Pour un premier message : se situer + ce qui est proposé + horizon possible.
+        Le lieu répond lorsqu’il y a alignement utile.
+    </div>
 
     <hr>
 
-    <p class="small">
-        <strong>EN (balanced & minimal)</strong><br><br>
-        Autonomous site. No visits, no tourism, no events, no business.<br>
-        Entry via relevance: interested → support → active → collaboration → membership.<br>
-        Remote contributions allowed (material, financial, skills); on-site depends on needs.<br>
-        Technical priorities: water → energy → greenhouse → poultry → wood → waste → saffron → surplus.<br>
-        Saffron internal. Surplus supports the whole.<br>
-        First contact: position + contribution + horizon.<br>
-        Initial email: contact@ecosauvage.fr
-    </p>
+    <div class="small">
+        <strong>EN (strict)</strong><br><br>
+        Autonomous site. No visits, no tourism, no events, no business.
+        Current focus: densification + surplus. Saffron internal.
+        Entry: interest → support → active → collaboration → membership.
+        Remote contributions allowed; on-site depends on needs.
+        First contact: position + contribution + horizon.
+    </div>
+
+    <div class="contact">
+        contact@ecosauvage.fr
+    </div>
 
 </div>
-
 </body>
 </html>

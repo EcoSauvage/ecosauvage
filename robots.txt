@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ecosauvage.fr/sitemap.xml

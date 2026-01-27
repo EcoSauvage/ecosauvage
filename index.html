@@ -8,39 +8,62 @@
     <style>
         body {
             margin: 0;
-            font-family: "Arial", sans-serif;
+            font-family: "Georgia", serif;
             color: #2b2b2b;
-            line-height: 1.6;
+            line-height: 1.65;
+            background: #fafafa;
         }
 
-        /* Bandeau en couleur forêt */
+        /* Bandeau vert forêt */
         .hero {
-            background-color: #228B22; /* forest green */
+            background-color: #2a5d2a;
             color: #fff;
             text-align: center;
             padding: 60px 20px;
         }
         .hero h1 {
             margin: 0;
-            font-size: 2.8rem;
-            font-weight: bold;
+            font-size: 3rem;
+            font-weight: 900; /* titre fort */
+            letter-spacing: .05em;
+            text-transform: uppercase;
         }
         .hero p {
-            margin: 12px 0 0;
-            font-size: 1.3rem;
+            margin-top: 10px;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #daddda;
         }
 
         .content {
-            max-width: 900px;
+            max-width: 860px;
             margin: auto;
-            padding: 30px 20px;
+            padding: 32px 20px;
         }
-        p {
-            margin-bottom: 18px;
+
+        .content p {
+            margin-bottom: 1.4em;
+            font-size: 1.05rem;
+            color: #333;
         }
+
+        .highlight {
+            font-weight: bold;
+            color: #2a5d2a;
+        }
+
+        .decor {
+            display: block;
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 24px 0;
+            color: #999;
+        }
+
         .contact {
             margin-top: 40px;
             font-weight: bold;
+            color: #2a5d2a;
         }
     </style>
 </head>
@@ -56,23 +79,25 @@
     <div class="content">
 
         <p>
-            ÉcoSauvage est un lieu de vie autonome et hors réseau où l’on explore de manière concrète
-            la gestion directe de ressources essentielles : eau, énergie, nourriture — sans dépendre
-            des services centralisés, en s’appuyant sur l’expérience et l’entraide plutôt que sur le
-            tourisme ou le modèle commercial.
-            Cette démarche s’inscrit dans la tradition des modes de vie indépendants et autosuffisants,
-            cherchant à produire ce qui est nécessaire avec soin et responsabilité.
+            ÉcoSauvage est un lieu de vie <span class="highlight">autonome et hors réseau</span> où l’on explore
+            de manière concrète la gestion directe de ressources essentielles : eau, énergie, nourriture —
+            sans dépendre des services centralisés, en s’appuyant sur l’expérience et l’entraide plutôt que
+            sur le tourisme ou le modèle commercial. Cette démarche s’inscrit dans la tradition des modes
+            de vie indépendants et autosuffisants, cherchant à produire ce qui est nécessaire avec soin
+            et responsabilité.
         </p>
 
         <p>
             Le projet accueille des contributions variées : savoir‑faire, compétences, idées ou temps,
-            dans un cadre réservé aux membres, où chacun peut participer de près comme de loin.
+            dans un cadre réservé aux membres, où chacun peut participer <em>de près</em> comme <em>de loin</em>.
             L’objectif est de construire ensemble des pratiques vivantes et des solutions durables,
             en respectant les rythmes naturels et l’équilibre des écosystèmes.
         </p>
 
+        <span class="decor">✧ — — — ✧</span>
+
         <p class="contact">
-            Pour nous joindre ou proposer votre contribution : contact@ecosauvage.fr
+            Pour nous joindre ou proposer votre participation : contact@ecosauvage.fr
         </p>
 
     </div>

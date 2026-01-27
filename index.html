@@ -1,130 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>ÉcoSauvage</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body {
-        font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #131313;
-        line-height: 1.45;
-    }
-    .wrap {
-        max-width: 780px;
-        margin: 40px auto 80px auto;
-        padding: 0 22px;
-        text-align: center;
-    }
-    h1 {
-        font-weight: 600;
-        font-size: 36px;
-        margin-bottom: 6px;
-        letter-spacing: 0.5px;
-    }
-    .sub {
-        font-style: italic;
-        font-size: 21px;
-        margin-top: 0px;
-        opacity: 0.9;
-    }
-    .block {
-        margin-top: 36px;
-        text-align: justify;
-        font-size: 19px;
-    }
-    .title {
-        font-weight: 500;
-        font-size: 22px;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .small {
-        font-size: 17px;
-        opacity: 0.85;
-        text-align: justify;
-        margin-top: 16px;
-    }
-    .contact {
-        font-size: 19px;
-        text-align: center;
-        margin-top: 40px;
-        font-weight: 600;
-    }
-    hr {
-        margin: 40px auto;
-        opacity: 0.4;
-        width: 50%;
-    }
-    .imgs {
-        margin-top: 32px;
-        display: grid;
-        gap: 18px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .imgs img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 4px;
-    }
-    @media (max-width: 700px) {
-        .imgs {
-            grid-template-columns: 1fr;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉcoSauvage — Ensemble autonome</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            color: #2b2b2b;
+            line-height: 1.6;
         }
-        .imgs img {
-            height: 200px;
-        }
-    }
-</style>
-</head>
 
+        /* Bandeau stylisé en texte */
+        .hero {
+            background-color: #1f3d2e;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin: 12px 0 0;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #1f5f3c;
+            font-size: 1.8rem;
+        }
+        p {
+            margin-bottom: 18px;
+        }
+        .divider {
+            margin: 30px 0;
+            border-top: 1px solid #ddd;
+        }
+        .contact {
+            margin-top: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
 <body>
 
-<div class="wrap">
-
-    <h1>ÉcoSauvage</h1>
-    <div class="sub">Ensemble autonome</div>
-
-    <div class="imgs">
-        <img src="assets/img1.jpg" alt="">
-        <img src="assets/img2.jpg" alt="">
-        <img src="assets/img3.jpg" alt="">
+    <!-- Bandeau stylisé (texte + slogan) -->
+    <div class="hero">
+        <h1>ÉcoSauvage</h1>
+        <p>Ensemble autonome • Vie simple • Hors réseau</p>
     </div>
 
-    <div class="block">
-        <div class="title">STATUT DU LIEU</div>
-        Lieu autonome. Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
-        Phase actuelle : densification + excédents. Safran réservé interne.
-        Orientation : autonomie + rendement + pertinence relationnelle.
+    <!-- Contenu principal structuré -->
+    <div class="content">
+
+        <h2>Statut du lieu</h2>
+        <p>
+            Lieu autonome. Pas de visites, pas de tourisme, pas d’événementiel, pas de commercial.
+            Phase actuelle : densification + excédents. Safran réservé interne.
+            Orientation : autonomie + rendement + pertinence relationnelle.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Entrée & Contributions</h2>
+        <p>
+            Gradients d’entrée : curieux compatibles → soutiens → actifs → collaborateurs → membres.
+            Contributions possibles à distance (matériel, financier, compétences) ou sur place selon besoins.
+            Pour un premier message : se situer + ce qui est proposé + horizon possible.
+            Le lieu répond lorsqu’il y a alignement utile.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="contact">
+            📧 contact@ecosauvage.fr
+        </div>
+
     </div>
 
-    <div class="block">
-        <div class="title">ENTRÉE & CONTRIBUTIONS</div>
-        Gradients d’entrée : curieux compatibles → soutiens → actifs → collaborateurs → membres.
-        Contributions possibles à distance (matériel, financier, compétences) ou sur place selon besoins.
-        Pour un premier message : se situer + ce qui est proposé + horizon possible.
-        Le lieu répond lorsqu’il y a alignement utile.
-    </div>
-
-    <hr>
-
-    <div class="small">
-        <strong>EN (strict)</strong><br><br>
-        Autonomous site. No visits, no tourism, no events, no business.
-        Current focus: densification + surplus. Saffron internal.
-        Entry: interest → support → active → collaboration → membership.
-        Remote contributions allowed; on-site depends on needs.
-        First contact: position + contribution + horizon.
-    </div>
-
-    <div class="contact">
-        contact@ecosauvage.fr
-    </div>
-
-</div>
 </body>
 </html>

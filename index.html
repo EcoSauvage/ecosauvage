@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <meta name="description" content="ÉcoSauvage : Architecture de résilience incarnée, autonomie réelle et émancipation individuelle." />
-    <meta name="keywords" content="autonomie, résilience, écosauvage, hors-réseau, DADA" />
+    <meta name="keywords" content="autonomie, résilience, écosauvage, hors-réseau, DADA, écojardin" />
     <meta property="og:title" content="ÉcoSauvage - Autochtones Autonomes" />
+    <meta property="og:description" content="Laboratoire de sobriété vécue et autonomie hors-réseau." />
     <meta property="og:image" content="banner.jpg" />
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
@@ -26,78 +29,131 @@
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             margin: 0;
+            padding: 0;
         }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         
-        /* HEADER REFAIT */
+        /* HEADER AVEC IMAGE DE FOND */
         #header {
-            padding: 120px 0 80px 0;
+            padding: 140px 0 100px 0;
             text-align: center;
             border-bottom: 2px solid var(--border);
-            /* Chemin direct vers banner.jpg à la racine */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner.jpg') center/cover no-repeat;
+            /* L'image banner.jpg doit être au même niveau que cet index.html */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner.jpg') center/cover no-repeat;
         }
 
-        /* TITRE : Plus gros, blanc, plus fin */
+        /* TITRE : Blanc, Très gros, Fin, Sans soulignement bleu */
+        h1#logo { margin: 0; padding: 0; }
         h1#logo a { 
             font-size: 5.5rem; 
             font-weight: 300; 
             letter-spacing: 12px; 
             color: #ffffff !important;
-            text-decoration: none;
+            text-decoration: none !important;
             text-transform: uppercase;
             display: block;
-            margin-bottom: 10px;
+            line-height: 1.2;
         }
 
-        /* SOUS-TITRE : Avant le menu, plus gros */
+        /* SOUS-TITRE : Avant le menu, Chaleureux et Gros */
         .slogan-principal {
+            display: block;
             font-size: 2.2rem;
             color: var(--text-light);
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 6px;
-            margin-bottom: 40px;
-            display: block;
+            margin: 30px 0 50px 0;
         }
 
-        /* MENU : Sous le slogan */
+        /* MENU CLIQUEABLE */
         #nav { margin-top: 20px; }
         #nav a { 
             color: var(--accent); 
             text-decoration: none; 
-            margin: 0 20px; 
+            margin: 0 15px; 
             font-weight: bold; 
             text-transform: uppercase;
             font-size: 1.1rem;
             border: 1px solid var(--border);
-            padding: 10px 15px;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
         }
-        #nav a:hover { background: var(--accent); color: #fff; }
+        #nav a:hover { 
+            background: var(--accent); 
+            color: #ffffff; 
+        }
 
-        /* SECTIONS */
-        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
-        h2.major { border-left: 5px solid var(--accent); padding-left: 20px; color: #fff; text-transform: uppercase; font-size: 1.8rem; margin-bottom: 40px; }
-
-        .grid-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .pillar { background: rgba(255,255,255,0.02); padding: 30px; border: 1px solid var(--border); }
-        .pillar h3 { color: var(--accent); text-transform: uppercase; font-size: 1.4rem; }
-
-        .formula { background: #161b16; padding: 40px; text-align: center; font-size: 1.8rem; border: 1px dashed var(--accent); margin: 40px 0; color: #fff; }
+        /* SECTIONS DE CONTENU */
+        section { padding: 90px 0; border-bottom: 1px solid var(--border); }
         
+        h2.major { 
+            border-left: 5px solid var(--accent); 
+            padding-left: 25px; 
+            color: #ffffff; 
+            text-transform: uppercase; 
+            font-size: 1.8rem; 
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+        }
+
+        /* GRILLE ARCHITECTURE */
+        .grid-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .pillar {
+            background: rgba(255,255,255,0.02);
+            padding: 35px;
+            border: 1px solid var(--border);
+        }
+
+        .pillar h3 { color: var(--accent); margin-top: 0; font-size: 1.4rem; text-transform: uppercase; }
+
+        /* FORMULE R_EXT */
+        .formula {
+            background: #161b16;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.8rem;
+            border: 1px dashed var(--accent);
+            margin: 40px 0;
+            color: #ffffff;
+        }
+
+        /* TABLEAU ACCÈS */
         table { width: 100%; border-collapse: collapse; margin-top: 30px; }
         th, td { border: 1px solid var(--border); padding: 20px; text-align: left; }
-        th { background: var(--accent); color: #fff; text-transform: uppercase; }
+        th { background: var(--accent); color: #ffffff; text-transform: uppercase; font-size: 0.9rem; }
 
-        .spirit { margin-top: 50px; padding: 30px; border: 1px solid var(--border); font-style: italic; background: rgba(74, 103, 65, 0.05); }
+        .spirit {
+            margin-top: 60px;
+            padding: 35px;
+            border: 1px solid var(--border);
+            font-style: italic;
+            background: rgba(74, 103, 65, 0.05);
+            font-size: 1.1rem;
+        }
 
-        #footer-bottom { text-align: center; padding: 60px 0; font-size: 0.9rem; opacity: 0.7; text-transform: uppercase; }
+        /* FOOTER */
+        #footer-bottom { 
+            text-align: center; 
+            padding: 80px 0; 
+            font-size: 0.9rem; 
+            opacity: 0.6; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
+        /* RESPONSIVE MOBILE */
         @media (max-width: 736px) {
-            h1#logo a { font-size: 2.5rem; }
-            .slogan-principal { font-size: 1.2rem; }
-            #nav a { display: block; margin: 10px 0; }
+            h1#logo a { font-size: 2.8rem; letter-spacing: 4px; }
+            .slogan-principal { font-size: 1.3rem; letter-spacing: 2px; }
+            #nav a { display: block; margin: 15px auto; width: 80%; }
+            section { padding: 60px 0; }
         }
     </style>
 </head>
@@ -107,7 +163,7 @@
 
         <section id="header">
             <div class="container">
-                <h1><a href="index.html" id="logo">ÉcoSauvage</a></h1>
+                <h1 id="logo"><a href="index.html">ÉcoSauvage</a></h1>
                 <span class="slogan-principal">Autochtones Autonomes</span>
                 <nav id="nav">
                     <a href="#dada">Posture DADA</a>
@@ -120,7 +176,7 @@
         <section id="dada">
             <div class="container">
                 <h2 class="major">01. Posture DADA</h2>
-                <p>Le <strong>Développement Actif d'Acteurs Autonomes</strong> déplace le curseur de la prise en charge vers la capacité d’agir. Nous refusons toute dynamique de sauvetage ou d'assistanat.</p>
+                <p>Le <strong>Développement Actif d'Acteurs Autonomes</strong> déplace le curseur de la prise en charge vers la capacité d’agir. Nous refusons toute dynamique de sauvetage ou d'assistanat. La relation est une émancipation souveraine d'adulte à adulte.</p>
             </div>
         </section>
 
@@ -128,17 +184,29 @@
             <div class="container">
                 <h2 class="major">02. Architecture Tripartite</h2>
                 <div class="grid-pillars">
-                    <div class="pillar"><h3>ÉcoJerome</h3><p>Axe conceptuel et relationnel.</p></div>
-                    <div class="pillar"><h3>ÉcoSauvage</h3><p>Réalité physique et technique.</p></div>
-                    <div class="pillar"><h3>ÉcoJardin</h3><p>Cadre juridique (Assoc. loi 1901).</p></div>
+                    <div class="pillar">
+                        <h3>ÉcoJerome</h3>
+                        <p>Axe conceptuel et relationnel. Sélection des interactions par résonance vibratoire et alignement de valeurs lors des premiers échanges épistolaires.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>ÉcoSauvage</h3>
+                        <p>Réalité physique et technique. Laboratoire de sobriété vécue entre Velay et Forez. Objectif : réduction drastique de la dépendance aux infrastructures centralisées.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>ÉcoJardin</h3>
+                        <p>Cadre juridique et protection du projet (Assoc. loi 1901). Souveraineté historique et services réservés exclusivement aux membres du cercle fermé.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <h2 class="major">03. Résilience</h2>
-                <div class="formula">R_ext = (Flux entrant / Flux interne) → 0</div>
+                <h2 class="major">03. Résilience du Site</h2>
+                <div class="formula">
+                    R_ext = (Flux entrant / Flux interne) → 0
+                </div>
+                <p>Captage d'eau autonome, énergie solaire et thermique dimensionnée au besoin réel, régénération de la fertilité du sol. ÉcoSauvage est un sanctuaire de cohérence individuelle.</p>
             </div>
         </section>
 
@@ -146,20 +214,47 @@
             <div class="container">
                 <h2 class="major">04. Trajectoire d'Accès</h2>
                 <table>
-                    <tr><td><strong>1. Résonance</strong></td><td>ÉcoJerome : Alignement des valeurs.</td></tr>
-                    <tr><td><strong>2. Engagement</strong></td><td>ÉcoJardin : Cadre juridique.</td></tr>
-                    <tr><td><strong>3. Présence</strong></td><td>ÉcoSauvage : Action sur le lieu.</td></tr>
+                    <thead>
+                        <tr>
+                            <th>Étape</th>
+                            <th>Entité / Objectif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Résonance</strong></td>
+                            <td>ÉcoJerome : Vérification de l'alignement des valeurs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Engagement</strong></td>
+                            <td>ÉcoJardin : Intégration du cadre juridique et associatif.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Présence</strong></td>
+                            <td>ÉcoSauvage : Rencontre physique et action concrète sur le lieu.</td>
+                        </tr>
+                    </tbody>
                 </table>
+
                 <div class="spirit">
-                    ÉcoSauvage, c'est l'histoire d'un retour à la maison. Un espace ouvert à ceux qui cherchent une vie plus douce, plus vraie.
+                    <strong>Ancrage :</strong> ÉcoSauvage, c'est l'histoire d'un retour à la maison. Un espace ouvert à ceux qui cherchent une vie plus douce, plus vraie, où la solidarité et le respect du vivant sont les seuls piliers de notre quotidien.
                 </div>
             </div>
         </section>
 
         <div id="footer-bottom">
-            <div class="container">&copy; ÉCOSAUVAGE - 2026</div>
+            <div class="container">
+                &copy; ÉCOSAUVAGE - AUTOCHTONES AUTONOMES - 2026
+            </div>
         </div>
+
     </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

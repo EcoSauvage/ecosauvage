@@ -9,7 +9,6 @@
     <meta name="keywords" content="autonomie, sobriété, expérimentation, action concrète, ÉcoSauvage" />
     <meta property="og:title" content="ÉcoSauvage — Ensemble, Autonomes" />
     <meta property="og:description" content="Un lieu d'exploration, d'expérience et d'engagement pour l'autonomie concrète." />
-    <meta property="og:image" content="banner.jpg" />
 
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
@@ -28,6 +27,7 @@
             line-height: 1.7;
         }
         .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+
         header {
             text-align: center;
             padding: 140px 0 80px;
@@ -51,6 +51,7 @@
             max-width: 800px;
             line-height: 1.5;
         }
+
         nav#main-nav a {
             margin: 0 8px;
             padding: 10px 16px;
@@ -66,6 +67,7 @@
             background: var(--accent);
             color: #fff;
         }
+
         section {
             padding: 80px 0;
             border-bottom: 1px solid var(--border);
@@ -78,6 +80,7 @@
             letter-spacing: 3px;
             margin-bottom: 30px;
         }
+
         .grid-3 {
             display: grid;
             gap: 30px;
@@ -89,6 +92,22 @@
             border: 1px solid var(--border);
         }
         .card h3 { color: var(--accent); text-transform: uppercase; margin-top: 0; }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 14px 28px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
         footer {
             text-align: center;
             padding: 60px 0;
@@ -159,26 +178,22 @@
     </div>
 </section>
 
-<!-- ✨ SECTION REJOINDRE -->
 <section id="adhesion">
     <div class="container">
         <h2 class="section-title">Rejoindre ÉcoSauvage</h2>
         <p>
-            Pour rejoindre ÉcoSauvage, cliquez sur le lien ci-dessous.  
-            Cela permet de recevoir nos informations, d’être tenu(e) au courant des actualités,
-            des rencontres, des chantiers et des expériences à venir.  
-            Vous pourrez ensuite, si vous le souhaitez, commencer le développement de votre autonomie,
-            soutenir la démarche, expérimenter le réel ou vous émanciper.
+            Pour rejoindre ÉcoSauvage, cliquez sur le bouton ci-dessous.  
+            Cela permet de recevoir nos informations, d’être tenu(e) au courant des actualités, des rencontres, des chantiers et des expériences à venir.  
+            Vous pourrez ensuite, si vous le souhaitez, commencer le développement de votre autonomie, soutenir la démarche, expérimenter le réel ou vous émanciper.
         </p>
 
-        <!-- 🔘 BOUTON HELLOASSO -->
-        <iframe id="haWidgetButton" allowtransparency="true"
-            src="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre/widget-bouton"
-            style="width: 100%; height: 70px; border: none;">
-        </iframe>
+        <a href="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre"
+           class="cta-button" target="_blank">
+            Rejoindre gratuitement
+        </a>
 
         <p style="margin-top:20px; font-size:0.9rem;">
-            *(Bouton HelloAsso : plateforme gratuite d’adhésion en ligne pour associations)* :contentReference[oaicite:1]{index=1}
+            *(Le formulaire s’ouvre sur HelloAsso, plateforme sécurisée d’adhésion en ligne.)*
         </p>
     </div>
 </section>

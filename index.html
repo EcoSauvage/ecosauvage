@@ -1,261 +1,198 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
-    <title>ÉcoSauvage | Ensemble, Autonomes</title>
+    <title>ÉcoSauvage | Laboratoire de sobriété et autonomie</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    
-    <meta name="description" content="ÉcoSauvage : Architecture de résilience incarnée, autonomie réelle et émancipation individuelle." />
-    <meta name="keywords" content="autonomie, résilience, écosauvage, hors-réseau, DADA, écojardin" />
-    <meta property="og:title" content="ÉcoSauvage - Autochtones Autonomes" />
-    <meta property="og:description" content="Laboratoire de sobriété vécue et autonomie hors-réseau." />
-    <meta property="og:image" content="banner.jpg" />
-    
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon.png">
 
+    <meta name="description" content="ÉcoSauvage : laboratoire autonome hors-réseau, sobriété vécue et émancipation réelle pour acteurs en résonance." />
+    <meta name="keywords" content="autonomie, résilience, hors réseau, écojardin, sobriété, ÉcoSauvage, DADA" />
+    <meta property="og:title" content="ÉcoSauvage — Sobriété, autonomie, cohérence" />
+    <meta property="og:description" content="Un lieu, une démarche pour réapprendre l’autonomie et réduire la dépendance aux systèmes centralisés." />
+    <meta property="og:image" content="banner.jpg" />
+
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
-            --bg: #0f140f; 
-            --accent: #4a6741; 
+            --bg: #0f140f;
+            --accent: #4a6741;
             --text: #d1d8cd;
-            --text-light: #f4f1ea; 
+            --text-light: #f4f1ea;
             --border: #2d3e2d;
+            --cta-bg: #4a6741;
+            --cta-text: #ffffff;
         }
-
         body {
-            background-color: var(--bg);
+            margin: 0; padding: 0;
+            background: var(--bg);
             color: var(--text);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
+        .container { max-width: 1000px; margin: auto; padding: 0 20px; }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER AVEC IMAGE DE FOND */
-        #header {
-            padding: 140px 0 100px 0;
+        header {
             text-align: center;
+            padding: 140px 0 80px;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('banner.jpg') center/cover no-repeat;
             border-bottom: 2px solid var(--border);
-            /* L'image banner.jpg doit être au même niveau que cet index.html */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner.jpg') center/cover no-repeat;
         }
-
-        /* TITRE : Blanc, Très gros, Fin, Sans soulignement bleu */
-        h1#logo { margin: 0; padding: 0; }
-        h1#logo a { 
-            font-size: 5.5rem; 
-            font-weight: 300; 
-            letter-spacing: 12px; 
-            color: #ffffff !important;
-            text-decoration: none !important;
+        header h1 {
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+            color: #fff;
             text-transform: uppercase;
-            display: block;
-            line-height: 1.2;
         }
-
-        /* SOUS-TITRE : Avant le menu, Chaleureux et Gros */
-        .slogan-principal {
-            display: block;
-            font-size: 2.2rem;
+        header p.slogan {
+            margin: 20px 0 30px;
+            font-size: 2rem;
             color: var(--text-light);
-            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            margin: 30px 0 50px 0;
+            letter-spacing: 4px;
         }
-
-        /* MENU CLIQUEABLE */
-        #nav { margin-top: 20px; }
-        #nav a { 
-            color: var(--accent); 
-            text-decoration: none; 
-            margin: 0 15px; 
-            font-weight: bold; 
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            border: 1px solid var(--border);
+        nav#main-nav a {
+            margin: 0 12px;
             padding: 12px 20px;
-            transition: all 0.3s ease;
-        }
-        #nav a:hover { 
-            background: var(--accent); 
-            color: #ffffff; 
-        }
-
-        /* SECTIONS DE CONTENU */
-        section { padding: 90px 0; border-bottom: 1px solid var(--border); }
-        
-        h2.major { 
-            border-left: 5px solid var(--accent); 
-            padding-left: 25px; 
-            color: #ffffff; 
-            text-transform: uppercase; 
-            font-size: 1.8rem; 
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-        }
-
-        /* GRILLE ARCHITECTURE */
-        .grid-pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .pillar {
-            background: rgba(255,255,255,0.02);
-            padding: 35px;
-            border: 1px solid var(--border);
-        }
-
-        .pillar h3 { color: var(--accent); margin-top: 0; font-size: 1.4rem; text-transform: uppercase; }
-
-        /* FORMULE R_EXT */
-        .formula {
-            background: #161b16;
-            padding: 40px;
-            text-align: center;
-            font-size: 1.8rem;
-            border: 1px dashed var(--accent);
-            margin: 40px 0;
-            color: #ffffff;
-        }
-
-        /* TABLEAU ACCÈS */
-        table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-        th, td { border: 1px solid var(--border); padding: 20px; text-align: left; }
-        th { background: var(--accent); color: #ffffff; text-transform: uppercase; font-size: 0.9rem; }
-
-        .spirit {
-            margin-top: 60px;
-            padding: 35px;
-            border: 1px solid var(--border);
-            font-style: italic;
-            background: rgba(74, 103, 65, 0.05);
-            font-size: 1.1rem;
-        }
-
-        /* FOOTER */
-        #footer-bottom { 
-            text-align: center; 
-            padding: 80px 0; 
-            font-size: 0.9rem; 
-            opacity: 0.6; 
-            letter-spacing: 2px;
             text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+        nav#main-nav a:hover {
+            background: var(--accent);
+            color: #fff;
         }
 
-        /* RESPONSIVE MOBILE */
-        @media (max-width: 736px) {
-            h1#logo a { font-size: 2.8rem; letter-spacing: 4px; }
-            .slogan-principal { font-size: 1.3rem; letter-spacing: 2px; }
-            #nav a { display: block; margin: 15px auto; width: 80%; }
-            section { padding: 60px 0; }
+        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        h2.section-title {
+            font-size: 1.9rem;
+            color: #fff;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            border: 1px solid var(--border);
+        }
+        .card h3 { color: var(--accent); text-transform: uppercase; margin-top: 0; }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--cta-bg);
+            color: var(--cta-text);
+            text-decoration: none;
+            padding: 14px 28px;
+            margin: 20px 0 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .cta-button:hover { opacity: 0.9; }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width:736px) {
+            header h1 { font-size: 3rem; letter-spacing: 6px; }
+            header p.slogan { font-size: 1.4rem; }
+            nav#main-nav a { display: block; margin: 12px auto; width: 80%; }
         }
     </style>
 </head>
+
 <body>
 
-    <div id="page-wrapper">
+<header>
+    <div class="container">
+        <h1>ÉcoSauvage</h1>
+        <p class="slogan">Laboratoire de sobriété & autonomie</p>
+        <nav id="main-nav">
+            <a href="#about">À propos</a>
+            <a href="#dada">Posture DADA</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#participer">Participer</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-        <section id="header">
-            <div class="container">
-                <h1 id="logo"><a href="index.html">ÉcoSauvage</a></h1>
-                <span class="slogan-principal">Ensemble, Autonomes</span>
-                <nav id="nav">
-                    <a href="#dada">Posture DADA</a>
-                    <a href="#architecture">Architecture</a>
-                    <a href="#acces">Accès</a>
-                </nav>
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">Qui sommes-nous ?</h2>
+        <p>ÉcoSauvage est un lieu d’expérimentation de sobriété vécue, de réduction durable de dépendances, et d’autonomie réelle. Nous œuvrons à réapprendre des modalités techniques et relationnelles pour devenir pleinement acteurs et responsables face aux nécessités du monde.</p>
+        <a href="#participer" class="cta-button">Entrer en résonance</a>
+    </div>
+</section>
+
+<section id="dada">
+    <div class="container">
+        <h2 class="section-title">Posture DADA</h2>
+        <p>Le <strong>Développement Actif d’Acteurs Autonomes (DADA)</strong> est une posture vivante : elle déplace la prise en charge vers la capacité d’agir. Nous refusons la logique d’assistanat. La relation est une émancipation souveraine d’adulte à adulte.</p>
+    </div>
+</section>
+
+<section id="architecture">
+    <div class="container">
+        <h2 class="section-title">Architecture tripartite</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>ÉcoJérôme</h3>
+                <p>Guide conceptuel et relationnel. Assure la résonance des valeurs et l’alignement avant toute rencontre.</p>
             </div>
-        </section>
-
-        <section id="dada">
-            <div class="container">
-                <h2 class="major">01. Posture DADA</h2>
-                <p>Le <strong>Développement Actif d'Acteurs Autonomes</strong> déplace le curseur de la prise en charge vers la capacité d’agir. Nous refusons toute dynamique de sauvetage ou d'assistanat. La relation est une émancipation souveraine d'adulte à adulte.</p>
+            <div class="card">
+                <h3>ÉcoSauvage</h3>
+                <p>L’espace physique et technique entre Velay & Forez. Laboratoire de sobriété hors-réseau et terrain d’action concrète.</p>
             </div>
-        </section>
-
-        <section id="architecture">
-            <div class="container">
-                <h2 class="major">02. Architecture Tripartite</h2>
-                <div class="grid-pillars">
-                    <div class="pillar">
-                        <h3>ÉcoJerome</h3>
-                        <p>Axe conceptuel et relationnel. Sélection des interactions par résonance vibratoire et alignement de valeurs lors des premiers échanges épistolaires.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>ÉcoSauvage</h3>
-                        <p>Réalité physique et technique. Laboratoire de sobriété vécue entre Velay et Forez. Objectif : réduction drastique de la dépendance aux infrastructures centralisées.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>ÉcoJardin</h3>
-                        <p>Cadre juridique et protection du projet (Assoc. loi 1901). Souveraineté historique et services réservés exclusivement aux membres du cercle fermé.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <h2 class="major">03. Résilience du Site</h2>
-                <div class="formula">
-                    R_ext = (Flux entrant / Flux interne) → 0
-                </div>
-                <p>Captage d'eau autonome, énergie solaire et thermique dimensionnée au besoin réel, régénération de la fertilité du sol. ÉcoSauvage est un sanctuaire de cohérence individuelle.</p>
-            </div>
-        </section>
-
-        <section id="acces">
-            <div class="container">
-                <h2 class="major">04. Trajectoire d'Accès</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Étape</th>
-                            <th>Entité / Objectif</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>1. Résonance</strong></td>
-                            <td>ÉcoJerome : Vérification de l'alignement des valeurs.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>2. Engagement</strong></td>
-                            <td>ÉcoJardin : Intégration du cadre juridique et associatif.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>3. Présence</strong></td>
-                            <td>ÉcoSauvage : Rencontre physique et action concrète sur le lieu.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="spirit">
-                    <strong>ÉcoSauvage, C'est un tempérament en action. Plus qu'un lieu, c'est une forge où la contrainte devient liberté et où le confort cède la place au caractère ; un espace pour réapprendre l'art de devenir pleinement souverain face aux nécessités du monde.
-</div>
-                </div>
-            </div>
-        </section>
-
-        <div id="footer-bottom">
-            <div class="container">
-                &copy; ÉCOSAUVAGE - AUTONOMES - 2026
+            <div class="card">
+                <h3>ÉcoJardin</h3>
+                <p>Cadre associatif loi 1901 qui protège le projet et encadre les participations selon une dynamique non commerciale.</p>
             </div>
         </div>
-
     </div>
+</section>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+<section id="participer">
+    <div class="container">
+        <h2 class="section-title">Comment participer ?</h2>
+        <ul>
+            <li><strong>1. Résonance :</strong> premier échange écrit pour vérifier l’alignement.</li>
+            <li><strong>2. Rencontre :</strong> visite du lieu et échanges concrets.</li>
+            <li><strong>3. Action :</strong> participation à la vie, aux chantiers, aux projets réels.</li>
+        </ul>
+        <a href="#contact" class="cta-button">Contactez-nous</a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact & accès</h2>
+        <p>Pour toute demande d’information ou pour entrer en résonance, écrivez-nous à :</p>
+        <p><strong>contact@ecosauvage.fr</strong></p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 ÉcoSauvage — Tous droits réservés<br>
+    Mentions légales & politique de confidentialité
+</footer>
 
 </body>
 </html>

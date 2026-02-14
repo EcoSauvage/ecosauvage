@@ -21,8 +21,7 @@
             --border: #2d3e2d;
         }
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             background: var(--bg);
             color: var(--text);
             font-family: 'Courier New', Courier, monospace;
@@ -36,18 +35,14 @@
             border-bottom: 2px solid var(--border);
         }
         header h1 {
-            font-size: 5rem;
-            margin: 0;
-            letter-spacing: 10px;
-            color: #fff;
+            font-size: 5rem; margin: 0;
+            letter-spacing: 10px; color: #fff;
             text-transform: uppercase;
         }
         header p.slogan {
             margin: 20px 0 30px;
-            font-size: 2rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 4px;
+            font-size: 2rem; color: var(--text-light);
+            text-transform: uppercase; letter-spacing: 4px;
         }
         header p.accroche {
             font-size: 1.2rem;
@@ -76,8 +71,7 @@
             border-bottom: 1px solid var(--border);
         }
         h2.section-title {
-            font-size: 1.9rem;
-            color: #fff;
+            font-size: 1.9rem; color: #fff;
             border-left: 5px solid var(--accent);
             padding-left: 20px;
             text-transform: uppercase;
@@ -171,16 +165,29 @@
         <p>Pour entrer en lien avec la démarche, nous proposons une adhésion libre et gratuite.  
         Elle permet de recevoir des informations, d’être tenu·e au courant des actualités, ateliers, chantiers et expériences à venir.</p>
         <p>Vous pourrez, si vous le souhaitez, soutenir la dynamique par une contribution libre lors de votre inscription.</p>
-        <!-- Widget HelloAsso (sera intégré ensuite) -->
+
+        <!-- == Widget HelloAsso INTÉGRÉ pour Rejoindre == -->
+        <iframe id="haWidget" allowtransparency="true"
+            src="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre/widget"
+            style="width: 100%; border: none;"
+            onload="window.addEventListener('message', function(e) {
+                const dataHeight = e.data.height;
+                const haWidgetElement = document.getElementById('haWidget');
+                haWidgetElement.height = dataHeight + 'px';
+            })"></iframe>
+
+        <p style="margin-top:20px; font-size:0.9rem;">
+            Les inscriptions sont gérées via HelloAsso (plateforme sécurisée dédiée aux associations).
+        </p>
+
     </div>
 </section>
 
 <section id="soutenir">
     <div class="container">
         <h2 class="section-title">Soutenir l’initiative</h2>
-        <p>Si vous souhaitez aller au-delà de l’adhésion, vous pouvez soutenir financièrement ou matériellement le projet.  
-        Cela permet de maintenir le lieu, investir dans des outils autonomes, et faire vivre cette démarche expérientielle à long terme.</p>
-        <p>(Un formulaire de soutien/don peut être intégré ici.)</p>
+        <p>Si vous souhaitez aller au-delà de l’adhésion, vous pourrez soutenir financièrement ou matériellement le projet ici.</p>
+        <p>(Le formulaire HelloAsso de soutien sera intégré une fois disponible.)</p>
     </div>
 </section>
 

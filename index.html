@@ -12,6 +12,7 @@
     <meta property="og:image" content="banner.jpg" />
 
     <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
         :root {
             --bg: #0f140f;
@@ -19,17 +20,22 @@
             --text: #d1d8cd;
             --text-light: #f4f1ea;
             --border: #2d3e2d;
-            --cta-bg: #4a6741;
-            --cta-text: #ffffff;
         }
+
         body {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             background: var(--bg);
             color: var(--text);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.7;
         }
-        .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
         header {
             text-align: center;
@@ -37,6 +43,7 @@
             background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('banner.jpg') center/cover no-repeat;
             border-bottom: 2px solid var(--border);
         }
+
         header h1 {
             font-size: 5rem;
             margin: 0;
@@ -44,6 +51,7 @@
             color: #fff;
             text-transform: uppercase;
         }
+
         header p.slogan {
             margin: 20px 0 30px;
             font-size: 2rem;
@@ -51,6 +59,7 @@
             text-transform: uppercase;
             letter-spacing: 4px;
         }
+
         nav#main-nav a {
             margin: 0 12px;
             padding: 12px 20px;
@@ -62,12 +71,17 @@
             text-decoration: none;
             transition: 0.3s ease;
         }
+
         nav#main-nav a:hover {
             background: var(--accent);
             color: #fff;
         }
 
-        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
         h2.section-title {
             font-size: 1.9rem;
             color: #fff;
@@ -83,25 +97,18 @@
             gap: 30px;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         }
+
         .card {
             background: rgba(255,255,255,0.03);
             padding: 25px;
             border: 1px solid var(--border);
         }
-        .card h3 { color: var(--accent); text-transform: uppercase; margin-top: 0; }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--cta-bg);
-            color: var(--cta-text);
-            text-decoration: none;
-            padding: 14px 28px;
-            margin: 20px 0 0;
+        .card h3 {
+            color: var(--accent);
             text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
+            margin-top: 0;
         }
-        .cta-button:hover { opacity: 0.9; }
 
         footer {
             text-align: center;
@@ -128,8 +135,7 @@
             <a href="#about">À propos</a>
             <a href="#dada">Posture DADA</a>
             <a href="#architecture">Structures</a>
-            <a href="#agir">Agir</a>
-            <a href="#participer">Participer</a>
+            <a href="#participer">Rejoindre</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -138,75 +144,84 @@
 <section id="about">
     <div class="container">
         <h2 class="section-title">Qui sommes-nous ?</h2>
-        <p><strong>ÉcoSauvage est un laboratoire vivant de sobriété pratique et d’autonomie concrète.</strong> Nous explorons et mettons en œuvre des façons de vivre qui réduisent les dépendances aux systèmes centralisés — techniques, énergétiques, économiques et relationnels.  
-        Ce lieu est un espace de pratique réelle, d’apprentissage mutuel et d’action durable, pour celles et ceux qui souhaitent se confronter aux nécessités du monde plutôt qu’y trouver des solutions toutes faites.</p>
-        <a href="#participer" class="cta-button">Commencer l’exploration</a>
+        <p><strong>ÉcoSauvage est un laboratoire vivant de sobriété pratique et d’autonomie concrète.</strong>
+        Un lieu d’expérimentation réelle, hors logique marchande, où chacun est invité à devenir acteur de sa liberté.</p>
     </div>
 </section>
 
 <section id="dada">
     <div class="container">
         <h2 class="section-title">Posture DADA</h2>
-        <p>Le <strong>Développement Actif d’Acteurs Autonomes (DADA)</strong> est une posture d’engagement : ici, il ne s’agit pas d’être accompagné ou pris en charge, mais de devenir progressivement autonome dans ses savoir-faire, sa capacité d’action et sa responsabilité.  
-        Chaque personne est invitée à être actrice de sa liberté, avec ses forces et limites, et à co-participer à un partage d’expériences honnête et exigeant.</p>
+        <p>Le Développement Actif d’Acteurs Autonomes est une démarche d’engagement concret.  
+        Ici, il ne s’agit pas de consommer une expérience mais d’assumer progressivement sa propre autonomie.</p>
     </div>
 </section>
 
 <section id="architecture">
     <div class="container">
-        <h2 class="section-title">Structures & engagements</h2>
+        <h2 class="section-title">Cadre & cohérence</h2>
         <div class="grid-3">
             <div class="card">
-                <h3>Écho & alignement</h3>
-                <p>Premiers échanges pour vérifier que nos valeurs, intentions et modes d’agir se répondent, avant toute rencontre physique ou engagement sur le terrain.</p>
+                <h3>Écho initial</h3>
+                <p>Premiers échanges écrits pour vérifier l’alignement humain avant toute rencontre.</p>
             </div>
             <div class="card">
-                <h3>Pratique & laboratoire</h3>
-                <p>L’espace physique, technique et humain où se confrontent sobriété, autonomie et engagement concret. C’est ici que les idées deviennent expérience vivante.</p>
+                <h3>Présence réelle</h3>
+                <p>Découverte du lieu et confrontation concrète aux pratiques de sobriété.</p>
             </div>
             <div class="card">
-                <h3>Cadre & soutien</h3>
-                <p>Une structure juridique protectrice qui garantit l’indépendance du projet et encadre les contributions dans une dynamique non commerciale et respectueuse de chacun.</p>
+                <h3>Engagement progressif</h3>
+                <p>Participation active selon ses capacités, dans une logique d’autonomie réelle.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="agir">
-    <div class="container">
-        <h2 class="section-title">Agir concrètement</h2>
-        <p>Vous pouvez soutenir ÉcoSauvage de manière simple et directe :</p>
-        <!-- Lien vers la page HelloAsso (à remplacer par ton URL) -->
-        <a href="https://www.helloasso.com/associations/ton-association" class="cta-button" target="_blank">Faire un don ou cotiser</a>
-        <p>Les contributions servent à maintenir le lieu, financer des outils autonomes et soutenir les activités de terrain.</p>
-        <small>Les paiements sont sécurisés et traités via HelloAsso. Aucune donnée bancaire n’est stockée sur ce site.</small>
-    </div>
-</section>
-
 <section id="participer">
     <div class="container">
-        <h2 class="section-title">Comment participer ?</h2>
-        <p>Voici les grandes étapes pour rejoindre la démarche :</p>
-        <ul>
-            <li><strong>1 – Écho initial :</strong> échanges écrits pour vérifier que nos valeurs et intentions s’accordent.</li>
-            <li><strong>2 – Présence concrète :</strong> rencontre sur le terrain et découverte des pratiques du laboratoire.</li>
-            <li><strong>3 – Participation active :</strong> engagement à expérimenter, agir et contribuer à la vie quotidienne du lieu en autonomie réelle.</li>
-        </ul>
-        <a href="#contact" class="cta-button">Demander une rencontre</a>
+        <h2 class="section-title">Rejoindre la Team ÉcoSauvage</h2>
+
+        <p><strong>Première porte : adhésion libre et gratuite.</strong></p>
+
+        <p>
+        Cette inscription permet d’entrer en lien avec la démarche, 
+        de recevoir les informations importantes, 
+        et d’ouvrir un premier espace d’échange.
+        </p>
+
+        <p>
+        Aucune cotisation obligatoire.  
+        Une contribution libre est possible pour celles et ceux qui souhaitent soutenir le lieu.
+        </p>
+
+        <!-- Widget HelloAsso FORMULAIRE COMPLET -->
+        <iframe id="haWidget" allowtransparency="true"
+            src="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre/widget"
+            style="width: 100%; border: none;"
+            onload="window.addEventListener('message', function(e) {
+                const dataHeight = e.data.height;
+                const haWidgetElement = document.getElementById('haWidget');
+                haWidgetElement.height = dataHeight + 'px';
+            })">
+        </iframe>
+
+        <p style="margin-top:20px; font-size:0.9rem;">
+        Les inscriptions sont gérées via HelloAsso (plateforme sécurisée dédiée aux associations).
+        </p>
+
     </div>
 </section>
 
 <section id="contact">
     <div class="container">
-        <h2 class="section-title">Contact & accès</h2>
-        <p>Pour toute demande d’information ou pour entamer un premier échange, écrivez-nous à :</p>
+        <h2 class="section-title">Contact direct</h2>
+        <p>Pour un premier échange écrit :</p>
         <p><strong>contact@ecosauvage.fr</strong></p>
     </div>
 </section>
 
 <footer>
-    &copy; 2026 ÉcoSauvage — Tous droits réservés<br>
-    Mentions légales & politique de confidentialité
+    &copy; 2026 ÉcoSauvage — Tous droits réservés
 </footer>
 
 </body>

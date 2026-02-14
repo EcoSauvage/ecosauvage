@@ -1,115 +1,250 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-	<head>
-		<title>ÉcoSauvage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<meta name="description" content="ÉcoSauvage : Architecture de résilience incarnée, autonomie réelle et émancipation individuelle en Haute-Loire." />
-		<meta name="keywords" content="autonomie, résilience, écosauvage, velay, hors-réseau, DADA, écojardin" />
-		<meta property="og:title" content="ÉcoSauvage - Autochtones Autonomes" />
-		<meta property="og:description" content="Laboratoire de sobriété vécue et autonomie hors-réseau." />
-		<meta property="og:image" content="images/banner.jpg" />
-		
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="images/favicon.png">
+<head>
+    <title>ÉcoSauvage | Autochtones Autonomes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <meta name="description" content="ÉcoSauvage : Architecture de résilience incarnée, autonomie réelle et émancipation individuelle en Haute-Loire." />
+    <meta name="keywords" content="autonomie, résilience, écosauvage, velay, hors-réseau, DADA, écojardin" />
+    <meta property="og:title" content="ÉcoSauvage - Autochtones Autonomes" />
+    <meta property="og:description" content="Laboratoire de sobriété vécue et autonomie hors-réseau." />
+    <meta property="og:image" content="images/banner.jpg" />
+    
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
-		<div id="page-wrapper">
+    <style>
+        :root {
+            --bg: #0f140f; 
+            --accent: #4a6741; 
+            --text: #d1d8cd;
+            --text-light: #f4f1ea; 
+            --border: #2d3e2d;
+        }
 
-			<section id="header">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<h1><a href="index.html" id="logo">ÉCO-SAUVAGE</a></h1>
-								<nav id="nav">
-									<a href="#dada">Posture DADA</a>
-									<a href="#architecture">Architecture</a>
-									<a href="#acces">Accès</a>
-								</nav>
-							</div>
-						</div>
-					</div>
-					<div id="banner">
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<p>Autochtones Autonomes</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+        /* Base & Structure */
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-			<section id="features">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<section>
-									<h2 class="major">01. Posture DADA</h2>
-									<p>Le <strong>Développement Actif d'Acteurs Autonomes</strong> déplace le curseur de la prise en charge vers la capacité d’agir. Nous refusons toute dynamique de sauvetage ou d'assistanat. La relation est une émancipation souveraine d'adulte à adulte.</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header & Banner */
+        #header {
+            padding: 100px 0 60px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--border);
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('images/banner.jpg') center/cover no-repeat;
+        }
 
-			<section id="content">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<h2 class="major">02. Architecture Tripartite</h2>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<h3>ÉcoJérôme</h3>
-									<p>Axe conceptuel et relationnel. Sélection des interactions par résonance vibratoire et alignement de valeurs lors des premiers échanges épistolaires.</p>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<h3>ÉcoSauvage</h3>
-									<p>Réalité physique et technique. Laboratoire de sobriété vécue entre Velay et Forez. Objectif : $R_{ext} \to 0$.</p>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<h3>ÉcoJardin</h3>
-									<p>Cadre juridique et protection du projet (Assoc. loi 1901). Souveraineté historique et services réservés au cercle fermé.</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
+        h1#logo a { 
+            font-size: 4rem; 
+            font-weight: 900; 
+            letter-spacing: 15px; 
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-			<section id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<section>
-									<h2 class="major">03. Trajectoire d'Accès</h2>
-									<p>1. <strong>Résonance</strong> (ÉcoJérôme) > 2. <strong>Engagement</strong> (ÉcoJardin) > 3. <strong>Présence</strong> (ÉcoSauvage).</p>
-									<p style="font-style: italic; margin-top: 20px; border-top: 1px solid #2d3e2d; padding-top: 20px;">
-										Ancrage : Modèle organique inspiré de l'Église primitive. Une structure fluide centrée sur l'entraide matérielle et la fidélité à une vérité vécue.
-									</p>
-								</section>
-							</div>
-						</div>
-						<div id="copyright">
-							&copy; ÉCO-SAUVAGE — RELATION D'ÉMANCIPATION — HAUTE-LOIRE
-						</div>
-					</div>
-				</section>
+        #nav { margin-top: 30px; }
+        #nav a { 
+            color: var(--accent); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        #nav a:hover { color: #fff; }
 
-		</div>
+        #banner { padding: 40px 0; }
+        #banner p { 
+            font-size: 1.6rem; 
+            color: var(--text-light); 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+        }
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+        /* Sections */
+        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        
+        h2.major { 
+            border-left: 5px solid var(--accent); 
+            padding-left: 20px; 
+            color: #fff; 
+            text-transform: uppercase; 
+            font-size: 1.8rem; 
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+        }
 
-	</body>
+        /* Grid Architecture */
+        .grid-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .pillar {
+            background: rgba(255,255,255,0.02);
+            padding: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .pillar h3 { color: var(--accent); margin-top: 0; font-size: 1.4rem; text-transform: uppercase; }
+
+        /* Formula Box */
+        .formula {
+            background: #161b16;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.8rem;
+            border: 1px dashed var(--accent);
+            margin: 40px 0;
+            color: #fff;
+        }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        th, td { border: 1px solid var(--border); padding: 20px; text-align: left; }
+        th { background: var(--accent); color: #fff; text-transform: uppercase; font-size: 0.9rem; }
+
+        .spirit {
+            margin-top: 50px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            font-style: italic;
+            background: rgba(74, 103, 65, 0.05);
+        }
+
+        /* Footer */
+        #footer-bottom { 
+            text-align: center; 
+            padding: 60px 0; 
+            font-size: 0.9rem; 
+            opacity: 0.7; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 736px) {
+            h1#logo a { font-size: 2.2rem; letter-spacing: 5px; }
+            #banner p { font-size: 1.1rem; letter-spacing: 2px; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page-wrapper">
+
+        <section id="header">
+            <div class="container">
+                <h1><a href="index.html" id="logo">ÉCO-SAUVAGE</a></h1>
+                <nav id="nav">
+                    <a href="#dada">Posture DADA</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#acces">Accès</a>
+                </nav>
+            </div>
+            <div id="banner">
+                <div class="container">
+                    <p>Autochtones Autonomes</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dada">
+            <div class="container">
+                <h2 class="major">01. Posture DADA</h2>
+                <p>Le <strong>Développement Actif d'Acteurs Autonomes</strong> déplace le curseur de la prise en charge vers la capacité d’agir. Nous refusons toute dynamique de sauvetage ou d'assistanat. La relation est une émancipation souveraine d'adulte à adulte.</p>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <div class="container">
+                <h2 class="major">02. Architecture Tripartite</h2>
+                <div class="grid-pillars">
+                    <div class="pillar">
+                        <h3>ÉcoJérôme</h3>
+                        <p>Axe conceptuel et relationnel. Sélection des interactions par résonance vibratoire et alignement de valeurs lors des premiers échanges épistolaires.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>ÉcoSauvage</h3>
+                        <p>Réalité physique et technique. Laboratoire de sobriété vécue entre Velay et Forez. Objectif : réduction drastique de la dépendance aux infrastructures centralisées.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>ÉcoJardin</h3>
+                        <p>Cadre juridique et protection du projet (Assoc. loi 1901). Souveraineté historique et services réservés exclusivement aux membres du cercle fermé.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="major">03. Résilience du Site</h2>
+                <div class="formula">
+                    R_ext = (Flux entrant / Flux interne) → 0
+                </div>
+                <p>Captage d'eau autonome, énergie solaire et thermique dimensionnée au besoin réel, régénération de la fertilité du sol. ÉcoSauvage est un sanctuaire de cohérence individuelle.</p>
+            </div>
+        </section>
+
+        <section id="acces">
+            <div class="container">
+                <h2 class="major">04. Trajectoire d'Accès</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Étape</th>
+                            <th>Entité / Objectif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Résonance</strong></td>
+                            <td>ÉcoJérôme : Vérification de l'alignement des valeurs par mail.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Engagement</strong></td>
+                            <td>ÉcoJardin : Intégration du cadre juridique et associatif.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Présence</strong></td>
+                            <td>ÉcoSauvage : Rencontre physique et action concrète sur le lieu.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="spirit">
+                    Ancrage : Modèle organique inspiré de l'Église primitive. Une structure fluide, centrée sur l'entraide matérielle et la fidélité à une vérité vécue plutôt qu'à une doctrine bureaucratique.
+                </div>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <div class="container">
+                &copy; ÉCO-SAUVAGE — RELATION D'ÉMANCIPATION — HAUTE-LOIRE
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>

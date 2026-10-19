@@ -1,307 +1,551 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>ÉcoSauvage | Lieu d’expérimentation autonome</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="ÉcoSauvage : lieu d’expérimentation situé dédié à l’autonomie réelle, à la sobriété vécue et à la responsabilité individuelle." />
-    <meta name="keywords" content="autonomie, sobriété, expérimentation, lieu autonome, ÉcoSauvage" />
-    <meta property="og:title" content="ÉcoSauvage — Lieu d’expérimentation autonome" />
-    <meta property="og:description" content="Un espace situé d’exploration des conditions réelles d’autonomie." />
+  <title>ÉcoSauvage — Un territoire vivant, des possibilités concrètes</title>
 
-    <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="ÉcoSauvage, ÉcoJardin et La Meute Sauvage : un territoire vivant, des projets concrets et différentes façons de participer, selon ses possibilités et ses envies.">
 
-    <style>
-        :root {
-            --bg: #0f140f;
-            --accent: #4a6741;
-            --text: #d1d8cd;
-            --text-light: #f4f1ea;
-            --border: #2d3e2d;
-        }
-        body {
-            margin: 0; padding: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.7;
-        }
-        .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+  <meta name="theme-color" content="#101610">
+  <meta property="og:title" content="ÉcoSauvage — Un territoire vivant">
+  <meta property="og:description" content="Découvrir le territoire, les projets et les façons de participer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ecosauvage.fr/">
 
-        header {
-            text-align: center;
-            padding: 140px 0 80px;
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('banner.jpg') center/cover no-repeat;
-            border-bottom: 2px solid var(--border);
-        }
-        header h1 {
-            font-size: 5rem; margin: 0;
-            letter-spacing: 10px; color: #fff;
-            text-transform: uppercase;
-        }
-        header p.slogan {
-            margin: 20px 0 30px;
-            font-size: 2rem; color: var(--text-light);
-            text-transform: uppercase; letter-spacing: 4px;
-        }
-        header p.accroche {
-            font-size: 1.2rem;
-            color: #fff;
-            margin: 0 auto 30px auto;
-            max-width: 800px;
-            line-height: 1.5;
-        }
+  <link rel="canonical" href="https://ecosauvage.fr/">
 
-        nav#main-nav a {
-            margin: 0 8px;
-            padding: 10px 16px;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: bold;
-            color: var(--accent);
-            border: 1px solid var(--border);
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
-        nav#main-nav a:hover {
-            background: var(--accent);
-            color: #fff;
-        }
+  <style>
+    :root {
+      --bg: #101610;
+      --surface: #182119;
+      --surface-light: #202c22;
+      --text: #edf1e8;
+      --muted: #b6c1b3;
+      --accent: #a5c78a;
+      --border: #354436;
+      --max-width: 1100px;
+    }
 
-        section {
-            display: block;
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        h2.section-title {
-            font-size: 1.9rem; color: #fff;
-            border-left: 5px solid var(--accent);
-            padding-left: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .grid-3 {
-            display: grid;
-            gap: 30px;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-        .card {
-            background: rgba(255,255,255,0.03);
-            padding: 25px;
-            border: 1px solid var(--border);
-        }
-        .card h3 { color: var(--accent); text-transform: uppercase; margin-top: 0; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff !important;
-            padding: 14px 28px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-top: 15px;
-        }
-        .cta-button:hover {
-            opacity: 0.9;
-            background: #5a7d4f;
-        }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-        footer {
-            text-align: center;
-            padding: 60px 0;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        @media (max-width:736px) {
-            header h1 { font-size: 3rem; letter-spacing: 6px; }
-            header p.slogan { font-size: 1.4rem; }
-            header p.accroche { font-size: 1rem; }
-            nav#main-nav a { display: block; margin: 8px auto; width: 90%; }
-        }
-    </style>
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      color: #d4e8c4;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    header {
+      padding: 88px 0 64px;
+      text-align: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      font-size: clamp(2.3rem, 6vw, 4.6rem);
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      color: var(--bg);
+      background: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .button:hover {
+      color: var(--bg);
+      background: #c5dfb0;
+    }
+
+    .button.secondary {
+      color: var(--text);
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .button.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+      padding: 14px 0;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 0.94rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 30px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .feature {
+      background: var(--surface);
+    }
+
+    .feature-inner {
+      max-width: 850px;
+      margin-inline: auto;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 22px;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px 24px;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding: 64px 0 48px;
+      }
+
+      main section {
+        padding: 52px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 21px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<header>
-    <div class="container">
-        <h1>ÉcoSauvage</h1>
-        <p class="slogan">Lieu d’expérimentation autonome</p>
-        <p class="accroche">
-            ÉcoSauvage explore concrètement des formes d’autonomie matérielle, relationnelle et organisationnelle à travers un lieu situé fonctionnant dans une logique de sobriété réelle et de responsabilité individuelle.
-        </p>
-        <nav id="main-nav">
-            <a href="#about">Démarche</a>
-            <a href="#ecosysteme">Écosystème</a>
-            <a href="#modalites">Modalités</a>
-            <a href="#accompagnement">Accompagnement</a>
-            <a href="#rejoindre">Adhésion</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <nav aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="#territoire">Le territoire</a>
+      <a href="#participer">Participer</a>
+      <a href="#ecojardin">ÉcoJardin</a>
+      <a href="#meute">La Meute Sauvage</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#contact">Contact</a>
     </div>
-</header>
+  </nav>
 
-<section id="about">
+  <header>
     <div class="container">
-        <h2 class="section-title">Démarche</h2>
+      <p class="eyebrow">Un territoire · Des projets · Du vivant</p>
 
-        <p>
-            ÉcoSauvage est un lieu d’expérimentation situé consacré à l’autonomie réelle, à la sobriété vécue et à la responsabilité individuelle.
-        </p>
+      <h1>ÉcoSauvage</h1>
 
-        <p>
-            Il ne s’agit ni d’un écolieu touristique, ni d’un centre de stage, ni d’un dispositif thérapeutique.  
-            Le lieu explore des conditions d’existence impliquant réduction des dépendances techniques, responsabilisation individuelle et organisation collective sobre.
-        </p>
+      <p class="lead">
+        Un territoire vivant. Des possibilités concrètes.
+        Une place à trouver.
+      </p>
 
-        <p>
-            L’autonomie y est abordée comme une construction matérielle, quotidienne et relationnelle, ancrée dans des conditions réelles d’habitation et de production.
-        </p>
+      <p class="lead" style="margin-top: 16px;">
+        Ici, chacun peut découvrir un univers, comprendre la démarche
+        et chercher la manière dont il pourrait y prendre part.
+        Pas besoin d'avoir déjà toutes les réponses : le premier pas
+        consiste à découvrir ce qui existe.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="#territoire">Découvrir le territoire</a>
+        <a class="button secondary" href="#participer">Trouver sa place</a>
+      </div>
     </div>
-</section>
+  </header>
 
-<section id="ecosysteme">
-    <div class="container">
-        <h2 class="section-title">Architecture de l’écosystème</h2>
+  <main>
+    <section id="territoire">
+      <div class="container">
+        <p class="eyebrow">Le point de départ</p>
+        <h2>Un territoire avant tout</h2>
 
-        <div class="grid-3">
+        <div class="section-intro">
+          <p>
+            ÉcoSauvage est une démarche ancrée dans le réel :
+            un territoire, des ressources, des contraintes, des idées
+            et des projets qui se construisent progressivement.
+          </p>
 
-            <div class="card">
-                <h3>Noyau incarné</h3>
-                <p>
-                    Recherche vécue et expérimentation quotidienne constituant le centre de gravité du lieu.
-                </p>
-            </div>
+          <p>
+            L'objectif est de remettre le vivant, l'autonomie,
+            la coopération et les savoir-faire concrets au cœur
+            de l'action, en tenant compte des moyens disponibles
+            et des réalités de chacun.
+          </p>
 
-            <div class="card">
-                <h3>Lieu ÉcoSauvage</h3>
-                <p>
-                    Support physique d’habitation, de production sobre et de transmission située.
-                </p>
-            </div>
+          <p>
+            Il ne s'agit pas seulement d'adhérer à une idée.
+            Il s'agit de découvrir une démarche et de voir ce qu'il
+            est possible de construire ensemble, de façon responsable.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            <div class="card">
-                <h3>Association support</h3>
-                <p>
-                    Cadre légal permettant l’adhésion, les contributions collectives et la structuration des activités.
-                </p>
-            </div>
+    <section id="participer">
+      <div class="container">
+        <p class="eyebrow">Plusieurs portes d'entrée</p>
+        <h2>Comment prendre part à l'aventure ?</h2>
 
+        <p class="section-intro">
+          Tout le monde n'a pas les mêmes envies, les mêmes compétences
+          ou les mêmes disponibilités. Voici trois portes d'entrée
+          pour découvrir l'univers et identifier celle qui vous correspond.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>ÉcoSauvage</h3>
+            <p>
+              Pour découvrir la démarche globale, les enjeux du territoire,
+              les possibilités de contribution et les projets à construire.
+            </p>
+            <p>
+              Une première prise de contact permet de présenter
+              votre démarche et d'échanger sur les possibilités réelles.
+            </p>
+            <a class="card-link" href="mailto:contact@ecosauvage.fr">
+              Prendre contact →
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>ÉcoJardin</h3>
+            <p>
+              Pour s'intéresser à la vie associative, au jardin,
+              aux cultures, aux expérimentations et aux initiatives
+              liées au vivant.
+            </p>
+            <p>
+              L'association constitue une porte d'entrée pour découvrir
+              les activités et les modalités de participation.
+            </p>
+            <a class="card-link"
+               href="https://www.helloasso.com/associations/ecojardin"
+               target="_blank" rel="noopener noreferrer">
+              Découvrir l'association →
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>La Meute Sauvage</h3>
+            <p>
+              Pour découvrir l'univers des huskys, les contenus,
+              les créations, la communauté et les projets autour
+              du lien entre humains, animaux et nature.
+            </p>
+            <p>
+              Un premier pas peut simplement être de suivre l'aventure
+              et de participer aux échanges.
+            </p>
+            <a class="card-link"
+               href="https://chat.whatsapp.com/D0IHdfXJVC4H0S4fpJ24b6"
+               target="_blank" rel="noopener noreferrer">
+              Rejoindre la communauté WhatsApp →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecojardin" class="feature">
+      <div class="container feature-inner">
+        <p class="eyebrow">Le cadre associatif</p>
+        <h2>ÉcoJardin : expérimenter et faire pousser des idées</h2>
+
+        <p>
+          ÉcoJardin porte une dimension associative et des activités
+          concrètes autour du jardin, des cultures et des expérimentations
+          liées au vivant.
+        </p>
+
+        <p>
+          C'est une manière de découvrir les initiatives existantes,
+          de comprendre le fonctionnement de l'association et de voir
+          comment une participation peut prendre forme.
+        </p>
+
+        <p class="small-note">
+          Les modalités d'adhésion, les activités et les possibilités
+          d'implication sont à consulter auprès de l'association.
+        </p>
+
+        <div class="actions" style="justify-content: flex-start;">
+          <a class="button"
+             href="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre"
+             target="_blank" rel="noopener noreferrer">
+            Découvrir l'adhésion
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="meute">
+      <div class="container">
+        <p class="eyebrow">L'univers vivant et créatif</p>
+        <h2>La Meute Sauvage</h2>
+
+        <p class="section-intro">
+          La Meute Sauvage est un univers de rencontres, de créations,
+          de musique, de vidéos et d'échanges inspirés par les huskys,
+          la nature et une autre façon d'envisager le lien au vivant.
+        </p>
+
+        <p class="section-intro">
+          On peut commencer par écouter, regarder, échanger et découvrir.
+          La communauté permet de suivre l'aventure et de voir si cet
+          univers correspond à ses envies.
+        </p>
+
+        <div class="actions" style="justify-content: flex-start;">
+          <a class="button"
+             href="https://chat.whatsapp.com/D0IHdfXJVC4H0S4fpJ24b6"
+             target="_blank" rel="noopener noreferrer">
+            Rejoindre la Meute sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="fonctionnement" class="feature">
+      <div class="container feature-inner">
+        <p class="eyebrow">Une démarche responsable</p>
+        <h2>Découvrir avant de s'engager</h2>
+
+        <p>
+          Chaque personne arrive avec son histoire, ses moyens,
+          ses compétences et ses limites. L'important est de pouvoir
+          en parler clairement pour déterminer si une collaboration
+          est pertinente.
+        </p>
+
+        <p>
+          La participation peut commencer par une prise de contact,
+          la découverte des projets, des échanges ou une implication
+          adaptée aux besoins et aux possibilités du moment.
+        </p>
+
+        <p>
+          Le territoire a ses contraintes. Les activités, les accès,
+          les accueils éventuels et les modalités pratiques ne sont
+          donc jamais automatiques : ils doivent être discutés et
+          confirmés au cas par cas.
+        </p>
+
+        <p>
+          L'idée n'est pas de promettre une place à tout le monde,
+          mais de trouver des formes de participation réalistes,
+          utiles et respectueuses du lieu comme des personnes.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <p class="eyebrow">Le premier pas</p>
+        <h2>Et si nous en parlions ?</h2>
+
+        <p class="section-intro">
+          Une question, une compétence à partager, une idée de projet
+          ou simplement l'envie de comprendre la démarche ?
+          Présentez-vous et expliquez ce qui vous amène.
+          Nous pourrons voir ensemble quelle porte d'entrée est la plus adaptée.
+        </p>
+
+        <div class="actions" style="justify-content: flex-start;">
+          <a class="button" href="mailto:contact@ecosauvage.fr">
+            Écrire un message
+          </a>
+
+          <a class="button secondary"
+             href="https://chat.whatsapp.com/D0IHdfXJVC4H0S4fpJ24b6"
+             target="_blank" rel="noopener noreferrer">
+            Rejoindre la communauté
+          </a>
         </div>
 
-        <p style="margin-top:30px;">
-            Le foncier fait l’objet d’une structuration dissociant propriété, usages et activités afin de garantir la pérennité et l’indépendance du lieu.
-        </p>
-    </div>
-</section>
+        <div class="contact-links">
+          <a href="mailto:contact@ecosauvage.fr">
+            contact@ecosauvage.fr
+          </a>
 
-<section id="modalites">
-    <div class="container">
-        <h2 class="section-title">Modalités de présence</h2>
-
-        <p>
-            L’accès au lieu repose sur des niveaux d’implication différenciés et non sur une logique d’accueil permanent ouvert.
-        </p>
-
-        <div class="grid-3">
-
-            <div class="card">
-                <h3>Temps collectifs</h3>
-                <p>
-                    Chantiers, immersions ou séjours courts permettant d’expérimenter concrètement des conditions d’autonomie matérielle et organisationnelle.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Vie contributive</h3>
-                <p>
-                    Les membres peuvent prendre part à la vie du lieu selon leurs capacités, leurs compétences et leur niveau d’engagement.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Cadre matériel</h3>
-                <p>
-                    Le lieu fonctionne hors réseaux techniques conventionnels.  
-                    Les conditions de présence impliquent sobriété, adaptation et responsabilité individuelle.
-                </p>
-            </div>
-
+          <a href="tel:+33743310844">
+            +33 7 43 31 08 44
+          </a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
+  </main>
 
-<section id="accompagnement">
+  <footer>
     <div class="container">
-        <h2 class="section-title">Relations d’accompagnement</h2>
-
-        <p>
-            Certains membres peuvent solliciter des espaces de clarification situés visant l’ancrage de leurs choix et le renforcement de leur capacité d’agir.
-        </p>
-
-        <div class="grid-3">
-
-            <div class="card">
-                <h3>Cadre</h3>
-                <p>
-                    Relation réservée aux membres, définie hors de toute logique thérapeutique ou de coaching.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Modalités</h3>
-                <p>
-                    Contribution, fréquence et durée sont définies conjointement, sans grille standardisée.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Accès</h3>
-                <p>
-                    L’accès dépend du niveau d’implication associative et de la relation construite dans le temps.
-                </p>
-            </div>
-
-        </div>
+      <span>© ÉcoSauvage</span>
+      <span>Un territoire vivant, des possibilités concrètes.</span>
     </div>
-</section>
-
-<section id="rejoindre">
-    <div class="container">
-        <h2 class="section-title">Adhésion</h2>
-
-        <p>
-            L’entrée dans l’écosystème se fait par l’adhésion à l’association support.  
-            Elle constitue le cadre juridique et relationnel préalable à toute implication sur le lieu.
-        </p>
-
-        <a href="https://www.helloasso.com/associations/ecojardin/adhesions/rejoindre"
-           class="cta-button" target="_blank">
-            Adhérer
-        </a>
-
-        <p style="margin-top:20px; font-size:0.9rem; opacity: 0.8;">
-            Le formulaire s’ouvre sur la plateforme sécurisée HelloAsso.
-        </p>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Pour toute demande d’information ou premier échange :</p>
-        <p><strong>contact@ecosauvage.fr</strong></p>
-    </div>
-</section>
-
-<footer>
-    &copy; 2026 ÉcoSauvage — Tous droits réservés
-</footer>
-
+  </footer>
 </body>
 </html>

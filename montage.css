@@ -1,0 +1,1 @@
+.pack-montage .photo:nth-child(n){display:block;grid-column:auto;grid-row:auto}.pack-montage{grid-template-columns:repeat(3,1fr);grid-template-rows:190px 190px}@media(max-width:600px){.pack-montage{grid-template-columns:repeat(2,1fr);grid-template-rows:160px 160px 160px}}

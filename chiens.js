@@ -1,0 +1,1 @@
+document.addEventListener('click',e=>{const b=e.target.closest('[data-dog-card]');if(!b)return;show(b.dataset.dogName,'<img class="detail-card" src="assets/chiens/'+b.dataset.dogCard+'" alt="Carte de collection '+b.dataset.dogName+'"><p>Illustration de collection · univers de La Meute Sauvage.</p>','LA MEUTE / COLLECTION DES CHIENS')});
